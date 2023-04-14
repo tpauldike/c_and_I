@@ -3,14 +3,14 @@
 
 int main(void)
 {
-    char str[10][25], pass, grp[20];
+    char str[10][25], pass[1], grp[20];
     char fname[25];
     int s = 0, cdwn = 9;
 
     printf("Enter 'r' to register your buddy group or 'q' to exit: \n");
-    scanf("%c", &pass);
+    scanf("%s", pass);
 
-    if (pass != 'r')
+    if (strcmp(pass, "r"))
     {
 	puts("Do have a nice day");
 	return -1;
